@@ -1,36 +1,30 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import DreamEntry from './pages/DreamEntry';
+import Archive from './pages/Archive';
+import About from './pages/About';
 
+/**
+ * Main Application component for Dreamscape Haven.
+ */
 function App() {
   return (
-    <div className="app">
-      <nav className="navbar">
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-            <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
-            </div>
-            <button className="btn">Template Button</button>
-          </div>
-        </div>
-      </nav>
-
-      <main>
-        <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">dreamscape_haven</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
-          </div>
-        </div>
-      </main>
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/entry" element={<DreamEntry />} />
+            <Route path="/archive" element={<Archive />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

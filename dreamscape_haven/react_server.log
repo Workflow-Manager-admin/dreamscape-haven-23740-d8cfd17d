@@ -18,3 +18,14 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/dreamscape-haven-23740-d8cfd17d/dreamscape_haven/src'
+ERROR in ./src/App.js 6:0-74
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/dreamscape-haven-23740-d8cfd17d/dreamscape_haven/src'
+
+ERROR in ./src/components/Navbar.js 5:0-43
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/dreamscape-haven-23740-d8cfd17d/dreamscape_haven/src/components'
+
+webpack compiled with 2 errors
